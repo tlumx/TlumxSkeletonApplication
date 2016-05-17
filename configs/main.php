@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'bootstrappers' => [
+        'Application\Bootstrap'
+    ],    
     'controllers' => [
         'index' => 'Application\Controller\IndexController'
     ],
