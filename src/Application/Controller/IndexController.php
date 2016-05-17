@@ -8,6 +8,7 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        echo "index action";
+        $this->getView()->some = "Hello, Tlumx!!!";
+        echo $this->render();
     }
 }

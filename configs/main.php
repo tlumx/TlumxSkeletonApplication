@@ -13,5 +13,8 @@ return [
                 'action' => 'index'
             ], 
         ]        
-    ]
+    ],
+    'templates_paths' => [
+        'index' => TEMPLATES_PATH . DS . 'index'
+    ],    
 ];
