@@ -8,7 +8,14 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        $this->getView()->some = "Hello, Tlumx!!!";
         echo $this->render();
     }
+    
+    public function helloAction()
+    {
+        $request = $this->getServiceProvider()->getRequest();
+        $name = $request->getAttribute('name');        
+        $this->getView()->name = $name;
+        echo $this->render();
+    }    
 }
