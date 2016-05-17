@@ -1,0 +1,11 @@
+{
+    "name": "tlumx/tlumx-skeleton-application",
+    "description": "Skeleton Application for Tlumx Framework",
+    "license": "MIT",
+    "keywords": ["framework","tlumx"],
+    "homepage": "http://framework.tlumx.xyz/",
+    "require": {
+        "php": ">=5.5",
+        "tlumx/framework": "~1.0.0"
+    }
+}
