@@ -2,35 +2,38 @@
 
 return [
     'bootstrappers' => [
-        'Application\Bootstrap'
-    ],    
-    'controllers' => [
-        'index' => 'Application\Controller\IndexController'
+        'App\Bootstrap'
     ],
+    'error_reporting' => E_ALL,
+    'display_errors' => '1',
+    'display_exceptions' => '1',
     'routes' => [
         'index' => [
-            'methods' => ['GET'],
-            'route' => '/',
+            'methods' => 'GET',
+            'pattern' => '/',
             'handler' => [
-                'controller' => 'index',
-                'action' => 'index'
+                'controller' => 'index'
             ], 
         ],
         'hello' => [
             'methods' => ['GET'],
-            'route' => '/hello/{name}',
+            'pattern' => '/hello/{name:\w+}',
             'handler' => [
                 'controller' => 'index',
                 'action' => 'hello'
             ],
-            'filters' => ['name' => '(\w+)']
         ]        
     ],
+    'service_container' => [
+        'factories' => [
+            'index' => \App\Controller\IndexController::class
+        ]
+    ],
     'templates_paths' => [
-        'index' => TEMPLATES_PATH . DS . 'index'
+        'index' => TEMPLATES_PATH . '/index'
     ],
     'templates' => [
-        'main' => TEMPLATES_PATH . DS . 'main.phtml'
+        'main' => TEMPLATES_PATH . '/main.phtml'
     ],
     'layout' => 'main'
 ];
