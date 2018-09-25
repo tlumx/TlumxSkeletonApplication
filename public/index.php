@@ -1,13 +1,23 @@
 <?php
+/**
+ * Tlumx (https://tlumx.com/)
+ *
+ * @author    Yaroslav Kharitonchuk <yarik.proger@gmail.com>
+ * @link      https://github.com/tlumx/framework
+ * @copyright Copyright (c) 2016-2018 Yaroslav Kharitonchuk
+ * @license   https://github.com/tlumx/framework/blob/master/LICENSE.md  (MIT License)
+ */
 
-define('DS', DIRECTORY_SEPARATOR);
 define('ROOT_PATH', dirname(__DIR__));
-define('TEMPLATES_PATH', ROOT_PATH . DS . 'templates');
+define('TEMPLATES_PATH', ROOT_PATH . '/templates');
 
 chdir(dirname(__DIR__));
-require 'load.php';
 
-use Tlumx\Application;
-          
-$app = new Application(include ROOT_PATH . DS . 'configs' . DS . 'main.php');
+require __DIR__ . '/../vendor/autoload.php';
+
+use Tlumx\Application\Application;
+
+$config = include 'configs/main.php';
+
+$app = new Application($config);
 $app->run();
