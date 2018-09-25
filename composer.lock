@@ -259,16 +259,16 @@
         },
         {
             "name": "tlumx/framework",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tlumx/framework.git",
-                "reference": "a0d644fa7eef7faab1ae10c54514a328cea66065"
+                "reference": "150e0b4ce194e6fe4cc0db532c5606f55eccaa58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tlumx/framework/zipball/a0d644fa7eef7faab1ae10c54514a328cea66065",
-                "reference": "a0d644fa7eef7faab1ae10c54514a328cea66065",
+                "url": "https://api.github.com/repos/tlumx/framework/zipball/150e0b4ce194e6fe4cc0db532c5606f55eccaa58",
+                "reference": "150e0b4ce194e6fe4cc0db532c5606f55eccaa58",
                 "shasum": ""
             },
             "require": {
@@ -323,7 +323,7 @@
                 "tlumx",
                 "tlumx framework"
             ],
-            "time": "2018-09-21T14:21:24+00:00"
+            "time": "2018-09-25T20:26:27+00:00"
         },
         {
             "name": "tlumx/tlumx-eventmanager",
