@@ -22,6 +22,6 @@
     </rule>
 
     <!-- Paths to check -->
-    <file>./app</file>
+    <file>./src</file>
     <file>./tests</file>
 </ruleset>
