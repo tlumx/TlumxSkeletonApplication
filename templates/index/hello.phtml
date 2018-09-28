@@ -1,1 +1,19 @@
-<h1>Hello, <?= $this->name ?>!!!</h1>
+<?php
+$this->setTitle(sprintf("Hello, %s!!!", $this->name));
+$this->menu = 'hello';
+?>
+<div class="row">
+    <div class="col">
+        <h1>Hello, <?= $this->name ?>!!!</h1>
+    </div>
+    <div class="col">
+        <form action="<?= $this->url ?>" method="POST">
+            <div class="form-group">
+                <label for="nameInput">Enter some name:</label>
+                <input type="text" class="form-control" id="nameInput" name="nameInput" aria-describedby="nameHelp" placeholder="Enter name" value="<?= $this->name ?>" required="true">
+                <small id="nameHelp" class="form-text text-muted">The entered name will be used as the route parameter; can consist only with word character (letter, number, underscore).</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
