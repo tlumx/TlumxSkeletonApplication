@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "src/App/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "AppTest\\": "tests/AppTest/"
         }
     },
     "scripts": {
